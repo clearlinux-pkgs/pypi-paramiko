@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x9C29BC560041E930 (jeff@bitprophet.org)
 #
 Name     : pypi-paramiko
-Version  : 2.9.2
-Release  : 1
-URL      : https://files.pythonhosted.org/packages/ea/01/f4c41238b4e4cae41502598c79a62785bdfe9fb5bb54728775805bd0b5d8/paramiko-2.9.2.tar.gz
-Source0  : https://files.pythonhosted.org/packages/ea/01/f4c41238b4e4cae41502598c79a62785bdfe9fb5bb54728775805bd0b5d8/paramiko-2.9.2.tar.gz
-Source1  : https://files.pythonhosted.org/packages/ea/01/f4c41238b4e4cae41502598c79a62785bdfe9fb5bb54728775805bd0b5d8/paramiko-2.9.2.tar.gz.asc
+Version  : 2.10.1
+Release  : 2
+URL      : https://files.pythonhosted.org/packages/97/bd/f66775642e1edf80ec530c27cc586353d94765f37a9583b5a68e4db9b96e/paramiko-2.10.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/97/bd/f66775642e1edf80ec530c27cc586353d94765f37a9583b5a68e4db9b96e/paramiko-2.10.1.tar.gz
+Source1  : https://files.pythonhosted.org/packages/97/bd/f66775642e1edf80ec530c27cc586353d94765f37a9583b5a68e4db9b96e/paramiko-2.10.1.tar.gz.asc
 Summary  : SSH2 protocol library
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -20,6 +20,7 @@ BuildRequires : buildreq-distutils3
 BuildRequires : pypi(bcrypt)
 BuildRequires : pypi(cryptography)
 BuildRequires : pypi(pynacl)
+BuildRequires : pypi(six)
 
 %description
 |version| |python| |license| |ci| |coverage|
@@ -64,21 +65,22 @@ Provides: pypi(paramiko)
 Requires: pypi(bcrypt)
 Requires: pypi(cryptography)
 Requires: pypi(pynacl)
+Requires: pypi(six)
 
 %description python3
 python3 components for the pypi-paramiko package.
 
 
 %prep
-%setup -q -n paramiko-2.9.2
-cd %{_builddir}/paramiko-2.9.2
+%setup -q -n paramiko-2.10.1
+cd %{_builddir}/paramiko-2.10.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641938339
+export SOURCE_DATE_EPOCH=1647103338
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -94,7 +96,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-paramiko
-cp %{_builddir}/paramiko-2.9.2/LICENSE %{buildroot}/usr/share/package-licenses/pypi-paramiko/b12c713656a9b98b6980a52bb068154cfdcbdd99
+cp %{_builddir}/paramiko-2.10.1/LICENSE %{buildroot}/usr/share/package-licenses/pypi-paramiko/b12c713656a9b98b6980a52bb068154cfdcbdd99
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
