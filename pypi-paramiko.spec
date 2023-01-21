@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x9C29BC560041E930 (jeff@bitprophet.org)
 #
 Name     : pypi-paramiko
-Version  : 2.12.0
-Release  : 17
-URL      : https://files.pythonhosted.org/packages/98/75/e78ddbe671a4a59514b59bc6a321263118e4ac3fe88175dd784d1a47a00f/paramiko-2.12.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/98/75/e78ddbe671a4a59514b59bc6a321263118e4ac3fe88175dd784d1a47a00f/paramiko-2.12.0.tar.gz
-Source1  : https://files.pythonhosted.org/packages/98/75/e78ddbe671a4a59514b59bc6a321263118e4ac3fe88175dd784d1a47a00f/paramiko-2.12.0.tar.gz.asc
+Version  : 3.0.0
+Release  : 18
+URL      : https://files.pythonhosted.org/packages/3b/6b/554c00e5e68cd573bda345322a4e895e22686e94c7fa51848cd0e0442a71/paramiko-3.0.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/3b/6b/554c00e5e68cd573bda345322a4e895e22686e94c7fa51848cd0e0442a71/paramiko-3.0.0.tar.gz
+Source1  : https://files.pythonhosted.org/packages/3b/6b/554c00e5e68cd573bda345322a4e895e22686e94c7fa51848cd0e0442a71/paramiko-3.0.0.tar.gz.asc
 Summary  : SSH2 protocol library
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -20,7 +20,6 @@ BuildRequires : buildreq-distutils3
 BuildRequires : pypi(bcrypt)
 BuildRequires : pypi(cryptography)
 BuildRequires : pypi(pynacl)
-BuildRequires : pypi(six)
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -68,17 +67,16 @@ Provides: pypi(paramiko)
 Requires: pypi(bcrypt)
 Requires: pypi(cryptography)
 Requires: pypi(pynacl)
-Requires: pypi(six)
 
 %description python3
 python3 components for the pypi-paramiko package.
 
 
 %prep
-%setup -q -n paramiko-2.12.0
-cd %{_builddir}/paramiko-2.12.0
+%setup -q -n paramiko-3.0.0
+cd %{_builddir}/paramiko-3.0.0
 pushd ..
-cp -a paramiko-2.12.0 buildavx2
+cp -a paramiko-3.0.0 buildavx2
 popd
 
 %build
@@ -86,7 +84,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1672296845
+export SOURCE_DATE_EPOCH=1674259449
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
