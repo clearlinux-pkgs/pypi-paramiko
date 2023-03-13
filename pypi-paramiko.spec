@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x9C29BC560041E930 (jeff@bitprophet.org)
 #
 Name     : pypi-paramiko
-Version  : 3.0.0
-Release  : 18
-URL      : https://files.pythonhosted.org/packages/3b/6b/554c00e5e68cd573bda345322a4e895e22686e94c7fa51848cd0e0442a71/paramiko-3.0.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/3b/6b/554c00e5e68cd573bda345322a4e895e22686e94c7fa51848cd0e0442a71/paramiko-3.0.0.tar.gz
-Source1  : https://files.pythonhosted.org/packages/3b/6b/554c00e5e68cd573bda345322a4e895e22686e94c7fa51848cd0e0442a71/paramiko-3.0.0.tar.gz.asc
+Version  : 3.1.0
+Release  : 19
+URL      : https://files.pythonhosted.org/packages/e8/53/e614a5b7bcc658d20e6eff6ae068863becb06bf362c2f135f5c290d8e6a2/paramiko-3.1.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/e8/53/e614a5b7bcc658d20e6eff6ae068863becb06bf362c2f135f5c290d8e6a2/paramiko-3.1.0.tar.gz
+Source1  : https://files.pythonhosted.org/packages/e8/53/e614a5b7bcc658d20e6eff6ae068863becb06bf362c2f135f5c290d8e6a2/paramiko-3.1.0.tar.gz.asc
 Summary  : SSH2 protocol library
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -73,10 +73,10 @@ python3 components for the pypi-paramiko package.
 
 
 %prep
-%setup -q -n paramiko-3.0.0
-cd %{_builddir}/paramiko-3.0.0
+%setup -q -n paramiko-3.1.0
+cd %{_builddir}/paramiko-3.1.0
 pushd ..
-cp -a paramiko-3.0.0 buildavx2
+cp -a paramiko-3.1.0 buildavx2
 popd
 
 %build
@@ -84,7 +84,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1674259449
+export SOURCE_DATE_EPOCH=1678720705
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
