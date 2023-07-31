@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-paramiko
-Version  : 3.2.0
-Release  : 20
-URL      : https://files.pythonhosted.org/packages/87/62/cee9551811c846e9735f749dbdf05d4f9f0dbcecd66eae35b5daacf9a117/paramiko-3.2.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/87/62/cee9551811c846e9735f749dbdf05d4f9f0dbcecd66eae35b5daacf9a117/paramiko-3.2.0.tar.gz
+Version  : 3.3.1
+Release  : 21
+URL      : https://files.pythonhosted.org/packages/44/03/158ae1dcb950bd96f04038502238159e116fafb27addf5df1ba35068f2d6/paramiko-3.3.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/44/03/158ae1dcb950bd96f04038502238159e116fafb27addf5df1ba35068f2d6/paramiko-3.3.1.tar.gz
 Summary  : SSH2 protocol library
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -71,10 +71,10 @@ python3 components for the pypi-paramiko package.
 
 
 %prep
-%setup -q -n paramiko-3.2.0
-cd %{_builddir}/paramiko-3.2.0
+%setup -q -n paramiko-3.3.1
+cd %{_builddir}/paramiko-3.3.1
 pushd ..
-cp -a paramiko-3.2.0 buildavx2
+cp -a paramiko-3.3.1 buildavx2
 popd
 
 %build
@@ -82,7 +82,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685120195
+export SOURCE_DATE_EPOCH=1690817409
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
