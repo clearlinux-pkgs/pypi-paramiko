@@ -5,7 +5,7 @@
 #
 Name     : pypi-paramiko
 Version  : 3.3.1
-Release  : 21
+Release  : 22
 URL      : https://files.pythonhosted.org/packages/44/03/158ae1dcb950bd96f04038502238159e116fafb27addf5df1ba35068f2d6/paramiko-3.3.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/44/03/158ae1dcb950bd96f04038502238159e116fafb27addf5df1ba35068f2d6/paramiko-3.3.1.tar.gz
 Summary  : SSH2 protocol library
